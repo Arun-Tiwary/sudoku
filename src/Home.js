@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Sudoku from "./Sudoku";
+import Sudoku from "./Sudoku";
 
 const Home = () => {
   const questionVeryEasy = [
@@ -132,11 +132,11 @@ const Home = () => {
         </>
       ) : (
         <>
-          {/* <Sudoku
+          <Sudoku
             question={question}
             setHomeComponent={setHomeComponent}
             difficulty={difficulty}
-          /> */}
+          />
         </>
       )}
     </div>
