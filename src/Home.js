@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sudoku from "./Sudoku";
+import Test2 from "./test2";
 
 const Home = () => {
   const questionVeryEasy = [
@@ -132,7 +133,7 @@ const Home = () => {
         </>
       ) : (
         <>
-          <Sudoku
+          <Test2
             question={question}
             setHomeComponent={setHomeComponent}
             difficulty={difficulty}
