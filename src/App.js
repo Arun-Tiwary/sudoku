@@ -1,6 +1,5 @@
 import "./App.css";
 import Home from "./Home";
-import Ref from "./useRef";
 
 function App() {
   return (
@@ -8,7 +7,6 @@ function App() {
       <h1>SUDOKU</h1>
       <hr />
       <Home />
-      {/* <Ref /> */}
     </div>
   );
 }
