@@ -8,11 +8,13 @@ const Sudoku = ({ question, setHomeComponent, difficulty }) => {
 
   //array to iteraate input
   const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  // const selectArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   //local state  handliing
   const [sudokuQuestion, setSudokuQuestion] = useState(deepCopy(question));
   // const [sudokuAnswer, setSudokuAnswer] = useState(deepCopy(questionArray));
   const [mistake, setMistake] = useState(0);
+  // const [selectedKey, setSelectedKey] = useState(0);
 
   // function to create deep copy
   function deepCopy(arr) {
@@ -22,8 +24,9 @@ const Sudoku = ({ question, setHomeComponent, difficulty }) => {
   //function to handle input changes by user.
 
   function handleInputChange(e, row, column) {
-    var value = parseInt(e.target.value) || 0;
-    var grid = deepCopy(sudokuQuestion);
+    let value = parseInt(e.target.value) || 0;
+
+    let grid = deepCopy(sudokuQuestion);
 
     if (value === 0 || (value >= 1 && value <= 9)) {
       grid[row][column] = value;
@@ -147,6 +150,7 @@ const Sudoku = ({ question, setHomeComponent, difficulty }) => {
                   style={columnIndex % 3 === 0 ? styleColumn : noStyle}
                 >
                   <input
+                    data-disable-touch-keyboard
                     className="input-cell"
                     value={
                       sudokuQuestion[row][column] === 0
@@ -169,3 +173,5 @@ const Sudoku = ({ question, setHomeComponent, difficulty }) => {
 };
 
 export default Sudoku;
+
+//
